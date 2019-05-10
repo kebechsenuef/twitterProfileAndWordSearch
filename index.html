@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>twitterQuestion</title> 
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+		.tg .tg-hmp3{background-color:#D2E4FC;text-align:left;vertical-align:top}
+		.tg .tg-baqh{text-align:center;vertical-align:top}
+		.tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
+		.tg .tg-lqy6{text-align:right;vertical-align:top}
+		.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+    </head> 
+    <body> 
+        <article> 
+            <header> 
+
+<table class="tg">
+  <tr>
+    <th class="tg-baqh" colspan="6">Request for tweets</th>
+  </tr>
+  <tr>
+    <td class="tg-hmp3">Search word</td>
+    <td class="tg-hmp3">
+		<form id="twtrSe" method="post" >
+		  <input type="text" name="what" value="flower">
+
+	</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">twitter handle</td>
+    <td class="tg-0lax">
+	<input type="text" name="who" value="realDonaldTrump">
+	</td>
+  </tr>
+  <tr>
+
+    <td class="tg-hmp3" colspan="2">
+	<input type="submit" value="Go">
+		</form></td>
+  </tr>
+</table>
+            </header> 
+        </article>
+		
+<script>
+
+$('#twtrSe').on('submit', function(e) {
+//action="https://twitter.com/search?q=100"
+
+ e.preventDefault();
+    var $this = $(this);
+    var queryParams = 'q=(from:' + $('input[name="who"]').val() 
+                               + ') (' 
+							   + $('input[name="what"]').val()
+							   + ')';
+    window.open('https://anon.to/?https://twitter.com/search?'+queryParams, "_blank");
+});
+</script>		
+		
+    </body> 
+</html> 
+
+
+
+
