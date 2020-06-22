@@ -5,7 +5,7 @@ The prepared link will be protected with https://anon.to Service.
 
 ### Example
 
-Try it: https://su27.ws/p/twitterSearch 
+Try it: https://aa27.de/p/twitterSearch 
 
 
 ### Tech
